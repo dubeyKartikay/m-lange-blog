@@ -1,0 +1,23 @@
+@import "../../styles/utils.scss";
+.nav{
+
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    .avatar{
+        height: auto;
+        width: 60px;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .contact{
+            color: $color-primary;
+            font-size: $font-small;
+        }
+    }
+}

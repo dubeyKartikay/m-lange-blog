@@ -1,0 +1,22 @@
+@import "../../styles/utils.scss";
+.footer{
+    @include set-background($footer-gradient);
+    min-height: 200px;
+
+    max-height: 30vh;
+    .text{
+
+    }
+    .subPbtn{
+        .sub{
+
+        }
+        .btn{
+
+        }
+    }
+    .social-media{
+        
+    }
+
+}
