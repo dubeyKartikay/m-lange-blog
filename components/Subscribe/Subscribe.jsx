@@ -1,10 +1,11 @@
-// 'use client';
 import styles from "./Subscribe.module.scss";
-export default function Subscribe({identifier}) {
+import SubscribeInputBox from "../SubscribeInputBox/SubscribeInputBox";
+import SubscribeButton from "../SubscribeButton/SubscribeButton";
+export default function Subscribe() {
   return (
-    <div className={styles.sub}>
-        <input id={identifier} placeholder=' ' type="text" />    
-        <span>Email</span>
+    <div className={styles.subscribe}>
+      <SubscribeInputBox identifier={`subscribe`}/>
+      <SubscribeButton inputFieldId={`subscribe`} />
     </div>
   )
 }
