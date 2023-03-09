@@ -3,19 +3,14 @@
 html,
 body {
     // $prefers-color-scheme: dark !global;
-  @include setPrefersColorScheme();
+
   padding: 0;
   margin: 0;
   max-width: 100vw !important;
-  @include set-background($bg-gradient);
+  background-color: $color-bg;
   background-repeat: no-repeat;
-  @media (prefers-color-scheme: dark) {
-    color: white;
-  }
-  
-  @media (prefers-color-scheme: light) {
-    color: #333333;
-  }
+
+color: $color-primary;
 }
 
 @media screen {

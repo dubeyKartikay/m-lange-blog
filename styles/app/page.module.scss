@@ -1,3 +1,18 @@
 .page{
-    min-height: 80vh;
+    min-height: 180vh;
+    width: 100%;
+    background: url("../../public/backgroundLeaves.png");
+    background-size: contain;
+    
+    img{
+        display: block;
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+    }
+    .subDiv{
+        padding: 2rem 0;
+    }
 }

@@ -1,43 +1,12 @@
-$prefers-color-scheme: light;
+
 $font-small: 16px;
-$bg-gradient: linear-gradient(
-  180deg,
-  rgba(0, 0, 0, 0.2) 0%,
-  rgba(40, 42, 54, 0.2) 21.7%
-);
-$color-primary: #e8630a;
-$footer-gradient: linear-gradient(
-  180deg,
-  rgba(56, 58, 87, 0.25) 0%,
-  #383a57 100%
-);
+
+$color-primary: #D15A54;
+$color-bg:#F9E5CA;
+$color-text:#261E2D;
 $button-gradient: linear-gradient(
   90deg,
   #e38748 3.47%,
   #e8630a 49.31%,
   #ad4500 100%
 );
-$color-light: #d3d3d3;
-$color-dark: #1e1e1e;
-
-@mixin set-background($args...) {
-
-  @media (prefers-color-scheme: dark) {
-    background: #1e1e1e $args;
-  }
-  background: #ffffff $args;
-  @include setPrefersColorScheme();
-}
-@mixin setPrefersColorScheme {
-  @media (prefers-color-scheme: dark) {
-    $prefers-color-scheme: dark !global;
-  }
-  $prefers-color-scheme: light !global;
-}
-
-@function setColor($light, $dark) {
-  @if ($prefers-color-scheme == dark) {
-    @return $dark;
-  }
-  @return $light;
-}

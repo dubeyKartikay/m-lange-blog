@@ -12,7 +12,6 @@ export default function Navbar() {
             src={avatar}
             placeholder="blur"
             className={styles.avatar}
-            objectFit="contain"
           />
         </a>
       </Link>

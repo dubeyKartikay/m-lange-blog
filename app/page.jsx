@@ -1,10 +1,12 @@
 import styles from "../styles/app/page.module.scss";
 import Subscribe from "../components/Subscribe/Subscribe";
+import Image from "next/image";
+import MelangeImg from "../public/melange.png"
 export default function Page() {
   return (
     <div className={styles.page}>
-      <h1>Hello, Next.js!</h1>
-      <Subscribe/>
+      <Image src={MelangeImg} alt ="Melange"/>
+      <div className={styles.subDiv} ><Subscribe/></div>
     </div>
   );
 }
