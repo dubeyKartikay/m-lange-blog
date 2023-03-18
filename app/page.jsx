@@ -7,9 +7,8 @@ import NewSection from "../components/NewSection/NewSection";
 export default function Page() {
   return (
     <div className={styles.page}>
-      <Image src={MelangeImg} alt ="Melange"/>
+      <Image className={styles.MelangeImg} src={MelangeImg} alt ="Melange"/>
       <div className={styles.subDiv} ><Subscribe/></div>
-      <HighlightedBlog />
       <NewSection/>
     </div>
   );

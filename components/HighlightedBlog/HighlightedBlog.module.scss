@@ -1,0 +1,26 @@
+.highBlog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .content{
+        width: 100%;
+        max-width: 500px;
+        .timeImg{
+            width: 24px;
+        }
+        .readTimeDiv{
+            display: flex;
+            padding-bottom: 1rem;
+            img{
+                margin-right: 4px;
+            }
+        }
+    }
+    .img{
+        border-radius: 25px;
+        margin: 1rem;
+        width: 100%;
+        max-width: 500px;
+
+    }
+}
