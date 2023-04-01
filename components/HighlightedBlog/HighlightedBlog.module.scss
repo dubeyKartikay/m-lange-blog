@@ -2,7 +2,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
     .content{
+        padding: 0 8px;
         width: 100%;
         max-width: 500px;
         .timeImg{
@@ -17,6 +19,7 @@
         }
     }
     .img{
+        padding: 0 8px;
         border-radius: 25px;
         margin: 1rem;
         width: 100%;

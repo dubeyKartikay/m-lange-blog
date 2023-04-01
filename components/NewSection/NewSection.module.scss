@@ -1,4 +1,16 @@
+@import "../../styles/utils.scss";
+.newSection{
+    .newSectionText{
+        text-align: center;
+        font-size: $font-med;
+        font-weight: $font-light;
+        color: $color-primary;
+        padding: 2rem 0;
+    }
+}
+
 .content{
+
 display: flex;
 justify-content: center;
 flex-direction: column;

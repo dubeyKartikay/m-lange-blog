@@ -17,7 +17,7 @@ export default function Navbar() {
       </Link>
       <ul>
         <Link className={styles.contact} href="/contact">
-          Contact
+          Contact • संपर्क
         </Link>
       </ul>
     </div>

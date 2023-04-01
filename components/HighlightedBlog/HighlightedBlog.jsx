@@ -2,8 +2,6 @@ import styles from "./HighlightedBlog.module.scss";
 import Image from "next/image";
 import timeImg from "../../public/time.png";
 export default function HighlightedBlog({_id,heading,subHeading,readingTime,date,views,likes,img}) {
-  
-    
     return (
     <div className={styles.highBlog} >
       <div className={styles.imgContainer}>
