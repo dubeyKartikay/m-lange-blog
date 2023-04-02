@@ -3,20 +3,24 @@
     width: 100%;
     max-width: 1200px;
     padding: 5%;
-    // background: #d9d9d9s;
+    margin: 0 auto;
+    // background: $color-primarys;
     a{
         color: $color-primary;
         transition: all 0.5s;
     }
     a:hover{
-        color: #d9d9d9;
+        color: $color-text;
 
     }
     img{
+        display: block;
         width: 100%;
         object-fit: cover;
         padding: 1rem;
         border-radius: 25px;
+        max-width: 500px;
+        margin: 0 auto;
     }
     table{
         width: 100%;
@@ -27,24 +31,33 @@
         thead{
             th{
                 
-                border-right: 1px solid #d9d9d9;
-                border-left: 1px solid #d9d9d9;
-                border-bottom: 1px solid #d9d9d9;
+                border-right: 1px solid $color-primary;
+                border-left: 1px solid $color-primary;
+                border-bottom: 1px solid $color-primary;
+                border-top: 1px solid $color-primary;
                 border-radius: 5px;
             }
         }
         tbody{
             td{
                 
-                // border-left: 3px solid #d9d9d9;
-                border-right: 1px solid #d9d9d9;
+                // border-left: 3px solid $color-primary;
+                border-right: 1px solid $color-primary;
+                border-left: 1px solid $color-primary;
                 padding: 1rem;
                 // border-radius: 5px;
             }
-
+            
         }
         tr{
             height: 2rem;
+        }
+        tr:last-child {
+            td{
+                border-bottom: 1px solid $color-primary;
+                border-radius: 5px;
+
+           }
         }
     }
     li{
@@ -86,16 +99,16 @@
 
     }
     hr{
-        border: 1px solid #d9d9d9;
-        background: #d9d9d9;
+        border: 1px solid $color-primary;
+        background: $color-primary;
         margin-bottom: 1rem;
     }
     blockquote {    
         font-weight: 200;
-        color: rgba(217, 217, 217, 0.463)    ;
+        color: rgba($color-primary, 1)    ;
         margin: 0;
         padding-left: 1em;
-        border-left: 3px #d9d9d9 solid;
+        border-left: 3px $color-primary solid;
         @media screen and (max-width:$screen--small) {
             font-size: 14px;
         }

@@ -1,0 +1,10 @@
+@import "../../styles/utils.scss";
+.btnDiv {
+    max-height: 40px;
+    .tick {
+       height: 40px;
+       width: 40px;
+
+       fill: $color-primary;
+    }
+}
