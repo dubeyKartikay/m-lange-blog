@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-head-element */
 import { Poppins } from "@next/font/google";
 import "../styles/globals.scss";
+import{ Analytics }from '@vercel/analytics/react';
 const poppins = Poppins({
   weight: ["200","400", "500", "600", "700"],
   style: ["normal", "italic"],
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <Navbar />
         <div>{children}</div>
-        
+        <Analytics />
       </body>
     </html>
   );
