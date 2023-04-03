@@ -1,7 +1,6 @@
 import connect from "../../lib/mongoDb/connect";
 import HighlightedBlog from "../HighlightedBlog/HighlightedBlog";
 import styles from "./NewSection.module.scss";
-import { log } from 'next-axiom'
 import Link from "next/link";
 export default async function NewSection() {
   const collection = await connect();
