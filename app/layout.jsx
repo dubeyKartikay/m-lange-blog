@@ -8,7 +8,12 @@ const poppins = Poppins({
 });
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import { Analytics }from '@vercel/analytics/react';
+export { reportWebVitals } from 'next-axiom';
+import { Analytics }
+  from
+
+  '@vercel/analytics/react'
+  ;
 export default function RootLayout({ children }) {
   return (
     <html>
@@ -19,8 +24,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <div>{children}</div>
 
-      <Analytics />
       </body>
+      <Analytics/>
     </html>
   );
 }

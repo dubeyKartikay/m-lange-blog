@@ -2,6 +2,7 @@
 import styles from "../../styles/app/contact/page.module.scss";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
+import { log } from 'next-axiom'
 export default function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,7 +29,7 @@ export default function Contact() {
     })
       .then(response => response.json())
       .then(data => console.log(data))
-      .catch(error => console.error(error));
+      .catch(error => log.error(error));
   }
   return (
     <div className={styles.page}>
