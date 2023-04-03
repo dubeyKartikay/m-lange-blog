@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer')
-import { log } from 'next-axiom'
 export default async function handler(req, res) {
     // res.status(200).json({ name: 'John Doe' })
     if (req.method === 'POST') {
@@ -14,7 +13,7 @@ export default async function handler(req, res) {
             },
 
         })
-        // console.log(res)
+        console.log(res)
         const { email:to, subject, text, recipe } = req.body
         const mailData = {
             from: 'Melange <blog.malange.contact@gmail.com>',
@@ -29,7 +28,7 @@ export default async function handler(req, res) {
         transporter.sendMail(mailData, (error, info) => {
             if (error) {
                 res.status(500).send({ message: 'Mail not Sent' })
-                return log.error("Error in send mail",error)
+                return console.log(error)
             }
             res.status(200).send({ message: 'Mail send', message_id: info.messageId })
         })

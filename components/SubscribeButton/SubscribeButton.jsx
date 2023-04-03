@@ -6,7 +6,6 @@ import Image from "next/image";
 import Tick from "../../public/tick.svg";
 import Cross from "../../public/cross.png";
 import ReactLoading from 'react-loading';
-import { log } from 'next-axiom'
 export default function SubscribeButton({ inputFieldId, setSubmissonState, submissionState }) {
   const validateEmail = (mail) => {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -38,14 +37,14 @@ export default function SubscribeButton({ inputFieldId, setSubmissonState, submi
       })
         .then(response => response.json())
         .then(data => {
-          // console.log(data);
+          console.log(data);
           setSubmissonState(2);
           setTimeout(() => { setSubmissonState(0) }, 2000);
         })
         .catch(error => {
           setSubmissonState(4);
           setTimeout(() => { setSubmissonState(0) }, 2000);
-          log.error(error)
+          console.error(error)
         });
     }
 
