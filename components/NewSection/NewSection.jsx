@@ -7,7 +7,7 @@ export default async function NewSection() {
 
   const res =  collection.find().sort({"date": -1}).limit(4);
   const arr = await res.map((ele) => {
-    return <Link key={ele._id} href = {`/blog/${ele._id}`} > <HighlightedBlog  {...ele} /></Link> 
+    return <HighlightedBlog key={ele._id}  {...ele} /> 
     } ).toArray();
     await new Promise(r => setTimeout(r, 1000));
   // console.log(arr);
