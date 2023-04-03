@@ -1,12 +1,10 @@
 'use client';
 import styles from "./SubscribeButton.module.scss";
 import Button from "../Button/Button";
-import { useContext } from "react";
 import Image from "next/image";
 import Tick from "../../public/tick.svg";
 import Cross from "../../public/cross.png";
 import ReactLoading from 'react-loading';
-import { log } from 'next-axiom'
 export default function SubscribeButton({ inputFieldId, setSubmissonState, submissionState }) {
   const validateEmail = (mail) => {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -45,7 +43,7 @@ export default function SubscribeButton({ inputFieldId, setSubmissonState, submi
         .catch(error => {
           setSubmissonState(4);
           setTimeout(() => { setSubmissonState(0) }, 2000);
-          log.error(error)
+          cpnsole.error(error)
         });
     }
 
