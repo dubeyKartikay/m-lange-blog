@@ -10,8 +10,8 @@ export default async function NewSection() {
     return <Link key={ele._id} href = {`/blog/${ele._id}`} > <HighlightedBlog  {...ele} /></Link> 
     } ).toArray();
     await new Promise(r => setTimeout(r, 1000));
-  // console.log(arr);
-  // console.log(res);
+  console.log(arr);
+  console.log(res);
   return (
     <div className={styles.newSection}>
       {/* <div className={styles.newSectionText} >New</div> */}
