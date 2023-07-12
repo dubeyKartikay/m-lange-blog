@@ -17,10 +17,11 @@ export default async function handler(req, res) {
         const { email:to, subject, text, recipe } = req.body
         const mailData = {
             from: 'Melange <blog.malange.contact@gmail.com>',
-            to: to,
+            to: "kartikayd2003@gmail.com",
             subject: subject,
             text: text,
             html: `
+                <p> ${to} <p/>
                 <p> ${text} <p/>
             `,
         }

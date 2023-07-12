@@ -5,7 +5,9 @@ export default function HighlightedBlog({_id,heading,subHeading,readingTime,date
     return (
     <div className={styles.highBlog} >
       <div className={styles.imgContainer}>
-      <Image className={styles.img} src={`https://raw.githubusercontent.com/dubeyKartikay/blog/master/images/${_id.toString().split(".")[0]}.png`} width = {500} height = {300} alt = "Image associated to the Blog"/>
+      <Image className={styles.img} src={img ? img :
+        `https://raw.githubusercontent.com/dubeyKartikay/blog/master/images/${_id.toString().split(".")[0]}.png`
+        } width = {500} height = {300} alt = "Image associated to the Blog"/>
       </div>
       <div className={styles.content}>
         <p style={{"opacity":0.8}}>{date.toDateString()}</p>
