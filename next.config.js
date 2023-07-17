@@ -9,7 +9,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com'
-      },
+      },{
+        protocol: 'https',
+        hostname: 'i.imgur.com'
+      }
     ],
   },
 }
