@@ -11,7 +11,7 @@ export default function Contact() {
     text = text.value;
 
 
-    console.log(text);
+    // console.log(text);
 
 
     fetch('/api/sendemail', {

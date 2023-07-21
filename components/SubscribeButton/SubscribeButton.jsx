@@ -37,7 +37,7 @@ export default function SubscribeButton({ inputFieldId, setSubmissonState, submi
       })
         .then(response => response.json())
         .then(data => {
-          console.log(data);
+          // console.log(data);
           setSubmissonState(2);
           setTimeout(() => { setSubmissonState(0) }, 2000);
         })
