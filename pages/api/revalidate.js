@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     try {
       // this should be the actual path not a rewritten path
       // e.g. for "/blog/[slug]" this should be "/blog/post-1"
-      path = req.body.path == null ? '/' : req.body.path;
+      const path = req.body.path == null ? '/' : req.body.path;
       await res.revalidate(path)
       return res.json({ revalidated: true })
     } catch (err) {
