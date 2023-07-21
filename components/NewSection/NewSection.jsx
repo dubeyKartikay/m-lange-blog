@@ -2,13 +2,14 @@ import connect from "../../lib/mongoDb/connect";
 import HighlightedBlog from "../HighlightedBlog/HighlightedBlog";
 import styles from "./NewSection.module.scss";
 import Link from "next/link";
-export default async function NewSection() {
-  const res = await getBlogsMetaData();
+export default async function NewSection({type}) {
+  const res = await getBlogsMetaData(type);
   const arr = await res.map((ele) => {
     return <Link key={ele._id} href = {`/blog/${ele._id}`} > <HighlightedBlog  {...ele} /></Link> 
     } ).toArray();
-  console.log(arr);
-  console.log(res);
+    res.close()
+  // console.log(arr);
+  // console.log(res);
   return (
     <div className={styles.newSection}>
       {/* <div className={styles.newSectionText} >New</div> */}
@@ -18,8 +19,8 @@ export default async function NewSection() {
     </div>
   )
 }
-async function getBlogsMetaData() {
-  const collection = await connect();
+async function getBlogsMetaData(type) {
+  const {collection} = await connect(type);
 
   const res = collection.find().sort({ "date": -1 }).limit(4);
   return res;
