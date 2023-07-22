@@ -1,5 +1,5 @@
 import MarkdownIt from "markdown-it";
-import markdownItMathjax from "markdown-it-mathjax";
+import mathjax3 from "markdown-it-mathjax3";
 import styles from "./Markdown.module.scss"
 import hljs from "highlight.js";
 export default function Markdown(props) {
@@ -14,7 +14,7 @@ export default function Markdown(props) {
       return ''; // use external default escaping
     }
   });
-  md.use(new markdownItMathjax());
+  md.use(mathjax3);
   let res = md.render(props.content);
   return (<div dangerouslySetInnerHTML={{__html:res}} className={styles.contentDiv}></div>);
 }
