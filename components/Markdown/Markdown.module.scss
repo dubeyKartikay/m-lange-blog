@@ -123,12 +123,12 @@
 
     code{
         padding: 3px 10px;
-       
+        
         background: #292c33;
         border-radius: 10px;
         font: ui-monospace;
         font-size: 16px;
-        color: hsl(265, 89%, 90%);
+        color: #bbbbbb;
         @media screen and (max-width:$screen--small) {
             font-size: 14px;
         }
