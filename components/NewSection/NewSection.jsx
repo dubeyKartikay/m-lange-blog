@@ -4,7 +4,7 @@ import styles from "./NewSection.module.scss";
 import Link from "next/link";
 import MiniSearch from 'minisearch'
 
-export default async function NewSection({type}) {
+export default async function NewSection({type,range}) {
   const res = await getBlogsMetaData(type);
   const arr = await res.map((ele) => {
 
@@ -17,7 +17,8 @@ export default async function NewSection({type}) {
     <div className={styles.newSection}>
       {/* <div className={styles.newSectionText} >New</div> */}
       <div className={styles.content}>
-        {arr.slice(0,5)}
+        {!range && arr.slice(0,5)}
+        {range && arr.slice(range.start,range.start + range.length)}
       </div>
     </div>
   )

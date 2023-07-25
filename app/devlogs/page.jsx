@@ -1,11 +1,4 @@
-import React from 'react'
-import styles from "../../styles/app/devlogs/page.module.scss"
-import NewSection from '../../components/NewSection/NewSection'
+import { redirect } from "next/navigation"
 export default function Devlogs() {
-  return (
-    <div>
-        <h1 className={styles.heading} > Dev Logs </h1>
-        <NewSection type='devlogs' />
-    </div>
-  )
+  redirect("devlogs/1")
 }
