@@ -15,3 +15,30 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 }
+.linksContainer{
+    display: flex;
+    justify-content: center;
+    // max-width: 700px;
+    // padding: 2rem;
+    margin: 0 auto;
+}
+.links{
+    background-color: $color-primary;
+    color: $color-bg;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin: 0 1rem;
+    transition: all 0.5s;
+}
+.links:hover{
+    background-color: $color-bg;
+    color: $color-primary;
+    transform: scale(1.2);
+    // border: 1px solid $color-primary;
+}
+.bottomLinksCont{
+    margin: 3rem 0;
+}
+.linkHide{
+    display: none;
+}

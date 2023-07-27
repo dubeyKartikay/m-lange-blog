@@ -25,14 +25,17 @@ export default function Navbar() {
       </div>
       <ul className={`${styles.navlinksContainer} ${isMenuClosed ? styles.navlinksContainer_show : ''}`}>
         
-        <Link className={styles.contact} href="/editorials">
+        <Link className={styles.contact} href="/editorials/1">
           Editorials
         </Link>
-        <Link className={styles.contact} href="/devlogs">
+        <Link className={styles.contact} href="/devlogs/1">
           Dev logs
         </Link>
+        <Link className={styles.contact} href="/gamedes/1">
+          Game Design
+        </Link>
         <Link className={styles.contact} href="/contact">
-          Contact • संपर्क
+          Contact
         </Link>
       </ul>
     </div>

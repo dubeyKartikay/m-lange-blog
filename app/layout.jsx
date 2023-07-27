@@ -4,7 +4,7 @@ import "../styles/globals.scss";
 const poppins = Poppins({
   weight: ["200","400", "500", "600", "700"],
   style: ["normal", "italic"],
-  subsets: ["english"],
+  subsets: ["latin"],
 });
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
