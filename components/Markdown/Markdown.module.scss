@@ -132,8 +132,10 @@
         @media screen and (max-width:$screen--small) {
             font-size: 14px;
         }
+        overflow-x: scroll;
     }
     pre{
+        overflow-x: scroll;
         background: #292c33;
         border-radius: 10px;
         padding: 1rem;
