@@ -25,8 +25,11 @@
         }
     }
     .img{
-        // padding: 0 8px;
-        // width: 100%;
+        @media screen and (max-width:$screen--small) {
+            padding: 0 8px;
+            width: 100%;
+            
+        }
         border-radius: 25px;
         padding: 1rem;
         max-width: 500px;
