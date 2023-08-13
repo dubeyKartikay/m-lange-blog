@@ -10,7 +10,8 @@ export default function Page() {
     <div className={styles.page}>
       <Image className={styles.MelangeImg} src={MelangeImg} alt ="Melange"/>
       <div className={styles.subDiv} ><Subscribe/></div>
-      <NewSection link = "gamedes" type='blogs' page={1} limit={10}/>  
+      <NewSection link = "devlogs" type='devlogs' page={1} limit={4}/>  
+      <NewSection link = "gamedes" type='blogs' page={1} limit={4}/>  
       <Footer/>
     </div>
   );
